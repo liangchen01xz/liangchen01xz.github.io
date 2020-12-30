@@ -1,13 +1,13 @@
 ---
+layout: post
 title: 相关链接
+subtitle:
 author: Liang Chen
+lang: en
 date: 2020-11-12 18:00:00 +0800
-categories: [Links]
 tags: [IC, NN]
-pin: true
-toc: true
-comments: false
-math: true
+catalog: true
+mathjax: true
 ---
 
 <head>

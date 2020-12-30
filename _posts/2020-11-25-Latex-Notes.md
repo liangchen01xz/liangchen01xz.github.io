@@ -1,13 +1,13 @@
 ---
+layout: post
 title: Latex笔记
+subtitle:
 author: Liang Chen
+lang: en
 date: 2020-11-25 18:00:00 +0800
-categories: [Notes]
-tags: [Latex]
-pin: false
-toc: true
-comments: false
-math: true
+tags: [Notes, Latex]
+catalog: true
+mathjax: true
 ---
 
 <head>

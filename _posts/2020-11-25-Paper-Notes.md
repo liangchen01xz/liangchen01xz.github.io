@@ -1,13 +1,13 @@
 ---
+layout: post
 title: Paper笔记 
+subtitle:
 author: Liang Chen
+lang: en
 date: 2020-11-25 18:00:00 +0800
-categories: [Notes]
-tags: [Paper]
-pin: false
-toc: true
-comments: false
-math: true
+tags: [Notes, Paper]
+catalog: true
+mathjax: true
 ---
 
 <head>

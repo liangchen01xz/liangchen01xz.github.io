@@ -1,12 +1,9 @@
 ---
 layout: post
-title: "用Python爬取网络图片"
-subtitle: ""
-author: "Liang Chen"
+title: 用Python爬取网络图片
+subtitle: 
+author: Liang Chen
 lang: en
-header-style: text
-header-img: ""
-header-mask: 0.3
 date: 2020-03-11 18:00:00 +0800
 tags: [Notes, Python]
 catalog: true

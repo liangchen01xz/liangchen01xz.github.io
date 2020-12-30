@@ -1,13 +1,13 @@
 ---
+layout: post
 title: 用FPGA驱动TFT屏显示图片
+subtitle:
 author: Liang Chen
+lang: en
 date: 2020-03-18 18:00:00 +0800
-categories: [Notes]
-tags: [Verilog, FPGA]
-pin: false
-toc: true
-comments: false
-math: true
+tags: [Notes, FPGA]
+catalog: true
+mathjax: true
 ---
 
 <head>

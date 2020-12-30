@@ -1,13 +1,13 @@
 ---
+layout: post
 title: Python学习笔记
+subtitle: 
 author: Liang Chen
+lang: en
 date: 2020-04-24 18:00:00 +0800
-categories: [Notes]
-tags: [Python]
-pin: false
-toc: true
-comments: false
-math: true
+tags: [Notes, Python]
+catalog: true
+mathjax: true
 ---
 
 <head>

@@ -1,13 +1,13 @@
 ---
+layout: post
 title: Vim命令记录
+subtitle:
 author: Liang Chen
+lang: en
 date: 2020-08-21 18:00:00 +0800
-categories: [Notes]
-tags: [Vim]
-pin: false
-toc: true
-comments: false
-math: true
+tags: [Notes, Vim]
+catalog: true
+mathjax: true
 ---
 
 <head>
