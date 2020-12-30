@@ -179,9 +179,9 @@ end
 
 4. NAND门的晶体管结构组成
 
-![DFF]({{site.url}}/assets/img/notes/DFF.jpg)
+![DFF]({{site.url}}/img/in-post/notes/DFF.jpg)
 
-![CMOS]({{site.url}}/assets/img/notes/CMOS.jpg)
+![CMOS]({{site.url}}/img/in-post/notes/CMOS.jpg)
 
-![wave]({{site.url}}/assets/img/notes/wave.png)
+![wave]({{site.url}}/img/in-post/notes/wave.png)
 

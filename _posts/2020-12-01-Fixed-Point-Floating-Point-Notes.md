@@ -82,19 +82,19 @@ $$
 
 ## Why use floating-point numbers?
 
-![]({{site.url}}/assets/img/notes/float_0612TV_00.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_00.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_01.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_01.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_02.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_02.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_03.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_03.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_04.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_04.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_05.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_05.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_06.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_06.png)
 
 ## What is floating-point numbers?
 
@@ -161,25 +161,25 @@ $$
 
 ----------------------------------------------------------------------
 
-![]({{site.url}}/assets/img/notes/float_0612TV_07.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_07.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_13.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_13.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_15.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_15.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_18.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_18.png)
 
-![]({{site.url}}/assets/img/notes/float_0612TV_19.png)
+![]({{site.url}}/img/in-post/notes/float_0612TV_19.png)
 
-![]({{site.url}}/assets/img/notes/float_cs_00.png)
+![]({{site.url}}/img/in-post/notes/float_cs_00.png)
 
-![]({{site.url}}/assets/img/notes/float_cs_01.png)
+![]({{site.url}}/img/in-post/notes/float_cs_01.png)
 
-![]({{site.url}}/assets/img/notes/float_cs_02.png)
+![]({{site.url}}/img/in-post/notes/float_cs_02.png)
 
-![]({{site.url}}/assets/img/notes/float_cs_03.png)
+![]({{site.url}}/img/in-post/notes/float_cs_03.png)
 
-![]({{site.url}}/assets/img/notes/float_cs_04.png)
+![]({{site.url}}/img/in-post/notes/float_cs_04.png)
 
 ## Reference
 

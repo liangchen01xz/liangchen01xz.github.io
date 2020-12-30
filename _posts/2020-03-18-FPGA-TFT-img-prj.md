@@ -36,7 +36,7 @@ mathjax: true
 >
 > 480*272 分辨率显示扫描示意图：
 >
-> ![]({{site.url}}/assets/img/notes/480_272.png)
+> ![]({{site.url}}/img/in-post/notes/480_272.png)
 
 ## 03. RGB接口TFT屏驱动设计
 
@@ -44,7 +44,7 @@ mathjax: true
 
 ### 3.1 TFT屏驱动模块接口信息
 
-<img src="{{site.url}}/assets/img/notes/TFT驱动模块接口.png"  />
+<img src="{{site.url}}/img/in-post/notes/TFT驱动模块接口.png"  />
 
 | port   | IO     | description |
 | :----: | :----: | :----: |
@@ -225,7 +225,7 @@ assign data_in = img_act?img_data:16'd0;
 
 > 源文件`tft_img_top.v`
 >
-> ![]({{site.url}}/assets/img/notes/top.png)
+> ![]({{site.url}}/img/in-post/notes/top.png)
 
 ## 07. 成果
 

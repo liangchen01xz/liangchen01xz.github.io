@@ -299,7 +299,7 @@ mathjax: true
 
  1. 首先把`page_addrs.py`脚本放在项目目录下，执行该脚本，会得到一个包含了所有页面地址的数据文件`page_addrs.pkl`如下：
 
-    ![]({{site.url}}/assets/img/notes/pickle.png)
+    ![]({{site.url}}/img/in-post/notes/pickle.png)
 
     > 注意一定要将该文件放在这个路径位置：
     >
@@ -321,12 +321,12 @@ mathjax: true
 
  2. 启动爬虫：`scrapy crawl jandan`，得到最终结果：
 
-    ![]({{site.url}}/assets/img/notes/imgs.png)
+    ![]({{site.url}}/img/in-post/notes/imgs.png)
 
     > 打开这个文件夹可以看到图片已经开始下载，（截取一部分）：
     >
-    > ![]({{site.url}}/assets/img/notes/sucess.png)
+    > ![]({{site.url}}/img/in-post/notes/sucess.png)
     >
     > 等待一段时间，所有图片下载完毕。。。
     >
-    > ![]({{site.url}}/assets/img/notes/outcome.png)
+    > ![]({{site.url}}/img/in-post/notes/outcome.png)

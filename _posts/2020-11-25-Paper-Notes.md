@@ -92,7 +92,7 @@ mathjax: true
 
 9. The structure of LE-ConvMN:
 
-    ![]({{site.url}}/assets/img/notes/LEConvMN.png)
+    ![]({{site.url}}/img/in-post/notes/LEConvMN.png)
 
 ## ESE: Efficient Speech Recognition Engine with Sparse LSTM on FPGA
 
@@ -113,11 +113,11 @@ mathjax: true
 
 3. ESE optimizes LSTM computation across algorithm, software and hardware stack:
 
-    ![]({{site.url}}/assets/img/notes/design_flow.png)
+    ![]({{site.url}}/img/in-post/notes/design_flow.png)
 
 4. The speech recognition pipeline. LSTM takes more than 90% of the total execution time in the whole computation pipeline:
 
-    ![]({{site.url}}/assets/img/notes/speech_recognition_pipeline.png)
+    ![]({{site.url}}/img/in-post/notes/speech_recognition_pipeline.png)
 
 5. Load Balance-Aware Pruning
 
@@ -125,7 +125,7 @@ mathjax: true
 
 7. Encoding in CSC format and data align using zero-padding
 
-    ![]({{site.url}}/assets/img/notes/data_align.png)
+    ![]({{site.url}}/img/in-post/notes/data_align.png)
 
 8. CSC: compressed sparse column
 
@@ -137,19 +137,19 @@ mathjax: true
 
 12. **the overall ESE system**
 
-    ![]({{site.url}}/assets/img/notes/overall_ESE.png)
+    ![]({{site.url}}/img/in-post/notes/overall_ESE.png)
 
 13. **one channel with multiple PEs**
 
-    ![]({{site.url}}/assets/img/notes/one_channel.png)
+    ![]({{site.url}}/img/in-post/notes/one_channel.png)
 
 14. **the state flow of ESE**
 
-    ![]({{site.url}}/assets/img/notes/state_flow.png)
+    ![]({{site.url}}/img/in-post/notes/state_flow.png)
 
 15. **Memory management unit**
 
-    ![]({{site.url}}/assets/img/notes/memory_management.png)
+    ![]({{site.url}}/img/in-post/notes/memory_management.png)
 
 ## 嵌入式人工智能处理器循环神经网络模块设计
 
