@@ -40,7 +40,7 @@ mathjax: true
 
 - Scrapy架构图(绿线是数据流向)
 
-  ![]({{site.url}}/assets/img/notes/8c591d54457bb033812a2b0364011e9c_articlex.png)
+  ![]({{site.url}}/img/in-post/notes/8c591d54457bb033812a2b0364011e9c_articlex.png)
 
 > - **Scrapy Engine(引擎)**
 > - **Scheduler(调度器)**
