@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-03-18 18:00:00 +0800
 tags: [Notes, FPGA]
 catalog: true
-mathjax: true
 ---
 
 <head>

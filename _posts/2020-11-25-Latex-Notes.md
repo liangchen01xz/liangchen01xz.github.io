@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-11-25 18:00:00 +0800
 tags: [Notes, Latex]
 catalog: true
-mathjax: true
 ---
 
 <head>

@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-12-01 18:00:00 +0800
 tags: [Notes, floating-point]
 catalog: true
-mathjax: true
 ---
 
 <head>

@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-11-12 18:00:00 +0800
 tags: [IC, NN]
 catalog: true
-mathjax: true
 ---
 
 <head>

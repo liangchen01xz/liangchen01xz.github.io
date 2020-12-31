@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-12-17 18:00:00 +0800
 tags: [Notes, eda]
 catalog: true
-mathjax: true
 ---
 
 <head>

@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-04-24 18:00:00 +0800
 tags: [Notes, Python]
 catalog: true
-mathjax: true
 ---
 
 <head>

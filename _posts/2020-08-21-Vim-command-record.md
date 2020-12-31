@@ -6,7 +6,6 @@ author: Liang Chen
 date: 2020-08-21 18:00:00 +0800
 tags: [Notes, Vim]
 catalog: true
-mathjax: true
 ---
 
 <head>
