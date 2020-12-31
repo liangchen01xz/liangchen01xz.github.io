@@ -3,7 +3,6 @@ layout: post
 title: Vim命令记录
 subtitle:
 author: Liang Chen
-lang: en
 date: 2020-08-21 18:00:00 +0800
 tags: [Notes, Vim]
 catalog: true

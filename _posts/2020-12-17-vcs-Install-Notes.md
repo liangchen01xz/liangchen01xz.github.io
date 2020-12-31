@@ -3,7 +3,6 @@ layout: post
 title: vcs启动license服务
 subtitle:
 author: Liang Chen
-lang: en
 date: 2020-12-17 18:00:00 +0800
 tags: [Notes, eda]
 catalog: true

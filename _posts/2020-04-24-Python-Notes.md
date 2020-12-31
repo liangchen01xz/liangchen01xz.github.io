@@ -3,7 +3,6 @@ layout: post
 title: Python学习笔记
 subtitle: 
 author: Liang Chen
-lang: en
 date: 2020-04-24 18:00:00 +0800
 tags: [Notes, Python]
 catalog: true

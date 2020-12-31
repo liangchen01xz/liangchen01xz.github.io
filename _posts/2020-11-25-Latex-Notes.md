@@ -3,7 +3,6 @@ layout: post
 title: Latex笔记
 subtitle:
 author: Liang Chen
-lang: en
 date: 2020-11-25 18:00:00 +0800
 tags: [Notes, Latex]
 catalog: true

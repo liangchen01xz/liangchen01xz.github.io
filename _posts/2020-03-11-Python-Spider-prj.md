@@ -3,7 +3,6 @@ layout: post
 title: 用Python爬取网络图片
 subtitle: 
 author: Liang Chen
-lang: en
 date: 2020-03-11 18:00:00 +0800
 tags: [Notes, Python]
 catalog: true

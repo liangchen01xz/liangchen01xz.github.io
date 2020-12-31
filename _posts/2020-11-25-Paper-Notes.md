@@ -3,13 +3,23 @@ layout: post
 title: Paper笔记 
 subtitle:
 author: Liang Chen
-lang: en
 date: 2020-11-25 18:00:00 +0800
 tags: [Notes, Paper]
 catalog: true
 mathjax: true
 ---
 
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
 ## Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting
 

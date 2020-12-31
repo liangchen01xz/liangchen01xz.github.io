@@ -3,7 +3,6 @@ layout: post
 title: Jetsontx2使用笔记
 subtitle:
 author: Liang Chen
-lang: en
 date: 2020-11-25 18:00:00 +0800
 tags: [Notes, Jetsontx2]
 catalog: true

@@ -3,7 +3,6 @@ layout: post
 title: 浮点数相关笔记
 subtitle:
 author: Liang Chen
-lang: en
 date: 2020-12-01 18:00:00 +0800
 tags: [Notes, floating-point]
 catalog: true
