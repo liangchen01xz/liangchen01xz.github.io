@@ -26,16 +26,14 @@ catalog: true
 
 A number format where the numbers are *unsigned* and where we have *a* integer bits (on the left of the decimal point) and *b* fractional bits (on the right of the decimal point) is referred to as a *U(a,b)* fixed-point format. For example, if we have a 16-bit format where the implied binary point is between the two bytes is a *U(8,8)* format.
 
-$$
-The\ actual\ value\ of\ an\ N\ bit\ number\ in\ U(a,b)\ is
-$$
+The actual value of an N bit number in U(a,b) is
 
 $$
 x = (1/2)^b \sum_{n=0}^{N-1}{2^nx_n}
 $$
 
 $$
-where\ x_n\ represents\ the\ bit\ at\ position\ n,\ x_0\ representing\ the\ Least\ Significant\ bits.
+where $x_n$ represents the bit at position n, $x_0$ representing the Least Significant bits.
 $$
 
 $$
@@ -48,17 +46,13 @@ For an N-bit unsigned integer number, the weight of the most significant bit (MS
 
 When dealing with N-bit signed numbers, we adopt a different notation and refer to the format where we have a sign bit, *a* integer bits and *b* fractional bits as an *A(a, b)* format. Note that this is slightly different from the *U(a, b)* notation where we have $N = a + b$. With the *A(a, b)*, $N = 1 + a + b$.
 
-$$
-In\ an\ N\ bit\ format\ A(a,b),\ the\ value\ of\ a\ binary\ number\ becomes
-$$
+In an N bit format A(a,b), the value of a binary number becomes
 
 $$
 x = (1/2)^b[-2^{N-1}x_{N-1} + \sum_{0}^{N-2}{2^nx_n}]
 $$
 
-$$
-A(7,8)\ \ N = 7 + 8 + 1 = 16\ \ x = 10000001.10000000 = -128 + 1 + 1/2 = -126.5d
-$$
+A(7,8)  N = 7 + 8 + 1 = 16  x = 10000001.10000000 = -128 + 1 + 1/2 = -126.5d
 
 ###  Attention
 
@@ -120,9 +114,9 @@ $$
 
 - zero
 
-$$
-0.0 = 0\ |\ 00000000\ |\ 00000000000000000000000
-$$
+```
+0.0 = 0 | 00000000 | 00000000000000000000000
+```
 
 - very small numbers
 

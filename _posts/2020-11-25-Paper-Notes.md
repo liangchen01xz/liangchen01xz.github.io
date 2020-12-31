@@ -46,9 +46,7 @@ catalog: true
 
 2. The key equations of ConvLSTM are:
 
-    $$
-    where\ \ast\ denotes\ the\ convolution\ operator\ and\ \circ\ denotes\ the\ Hadamard\ product,\ also\ known\ as\ element-wise\ multiplication.
-    $$
+    where $\ast$ denotes the convolution operator and \circ denotes the Hadamard product, also known as element-wise multiplication.
     
     $$
     \begin{align*}
