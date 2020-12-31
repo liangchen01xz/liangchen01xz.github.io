@@ -179,7 +179,7 @@ $$
 
 ![]({{site.url}}/img/in-post/notes/float_cs_04.png)
 
-## Reference
+## References
 
 1. [CSC231 An Introduction to Fixed- and Floating-Point Numbers](http://www.science.smith.edu/dftwiki/index.php/CSC231_An_Introduction_to_Fixed-_and_Floating-Point_Numbers#Range_of_Floating-Point_Numbers)
 

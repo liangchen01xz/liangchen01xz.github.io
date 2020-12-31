@@ -26,9 +26,7 @@ catalog: true
 
 1. The key equations of LSTM are:
 
-    $$
-    where\ \circ\ denotes\ the\ Hadamard\ product,\ also\ known\ as\ element-wise\ multiplication.
-    $$
+    where $\circ$ denotes the Hadamard product, also known as element-wise multiplication.
     
     $$
     \begin{align*}
