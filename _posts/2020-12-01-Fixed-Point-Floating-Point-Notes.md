@@ -32,9 +32,7 @@ $$
 x = (1/2)^b \sum_{n=0}^{N-1}{2^nx_n}
 $$
 
-$$
 where $x_n$ represents the bit at position n, $x_0$ representing the Least Significant bits.
-$$
 
 $$
 U(4,4)\ \ x = 1011.1111 = 8 + 2 + 1 + 1/2 + 1/4 + 1/8 + 1/16 = 11.9375
@@ -114,9 +112,7 @@ $$
 
 - zero
 
-```
-0.0 = 0 | 00000000 | 00000000000000000000000
-```
+`0.0 = 0 | 00000000 | 00000000000000000000000`
 
 - very small numbers
 
