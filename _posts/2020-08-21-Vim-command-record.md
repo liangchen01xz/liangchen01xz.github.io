@@ -20,6 +20,8 @@ catalog: true
     </script>
 </head>
 
+> [Vim实用技巧](http://library-cdq.oss-cn-beijing.aliyuncs.com/technology/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.pdf)
+
 # vi 常用命令  
 
 ## 01. 一般模式  
@@ -188,7 +190,7 @@ catalog: true
 ## 一行内查找字符
 
 - `f F`
-- `;`: 重复查找
+- `;,`: 重复查找
 
 ## 修改单词
 
@@ -200,3 +202,43 @@ catalog: true
 - `ya"`: copy cotent in "" including ""
 - `yw yaw dw daw`
 
+---------------------------------------------------------------------------
+
+Normal mode:
+
+- `s` = `xi`
+
+- `>`: 增加缩进 `>G` `>5`
+- `<`: 减小缩进 `<G` `>5`
+
+- `C` = `c$`
+
+- `<c-a>`: + target number
+- `<c-x>`: -
+
+- `dl`: 删除一个字符
+- `daw`: ~
+- `dap`: 删除一个段落
+
+- `gu`: abc
+- `gU`: ABC
+- `g~`: abc -> ABC
+
+Insert mode:
+
+`<C-h>`: 删除前一个字符
+`<C-w>`: 删除前一个单词
+`<C-u>`: 删除至行首
+
+`<C-[>`: transfer to Nomal mode
+`<C-o>`: transfer to Insert-Normal mode 在插入模式下可以进行一次普通模式操作
+
+`<C-r>=6+10<Enter>`: 在插入模式下计算寄存器中的表达式结果并输出在光标后
+
+Visual mode:
+
+`v`: 针对字符
+`V`: 针对行
+`<C-v>`: 针对块
+`gv`: 重复选择上一次的可视选区
+`o`: 切换选区的开始位置
