@@ -40,7 +40,7 @@ catalog: true
     
     `Makefile`:
     
-    ```Makefile
+    ```makefile
     export DESIGN_NAME= nnic
     export TB_NAME = ok_for_nnic_tb
     
@@ -145,7 +145,7 @@ catalog: true
     
     `Makefile`:
     
-    ```Makefile
+    ```makefile
     export DESIGN_NAME= nnic
     export TB_NAME = ok_for_nnic_tb
     
