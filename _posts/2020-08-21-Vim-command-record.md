@@ -202,6 +202,14 @@ catalog: true
 - `ya"`: copy cotent in "" including ""
 - `yw yaw dw daw`
 
+## 代码折叠
+
+- `set foldmethod=indent`: 缩进折叠
+- `za`: 打开或关闭当前折叠
+- `zM`: 关闭所有折叠
+- `zR`: 打开所有折叠
+- `zj`, `zk`, `[z`, `]z`
+
 ---------------------------------------------------------------------------
 
 Normal mode:
