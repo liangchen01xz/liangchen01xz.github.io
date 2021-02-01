@@ -4,7 +4,7 @@ title: vcs仿真脚本
 subtitle:
 author: Liang Chen
 date: 2021-01-18 18:00:00 +0800
-tags: [Notes, EDA]
+tags: [Notes, EDA, vcs]
 catalog: true
 ---
 
@@ -19,6 +19,8 @@ catalog: true
         });
     </script>
 </head>
+
+> Project Address: [https://github.com/cliang935/vcs_script](https://github.com/cliang935/vcs_script)
 
 0. 在`.bashrc`中加入:
 
