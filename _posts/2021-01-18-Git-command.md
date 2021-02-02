@@ -54,12 +54,20 @@ catalog: true
 
 `git branch -d`
 
-`git reset --hard HEAD`
+`git reset --hard HEAD^`
+
+`git reset --soft HEAD^`
 
 `git reset --hard <commit>`
 
 `git reset <commit>`
 
 `git reset --keep <commit>`
+
+`git stash`
+
+`git push origin master -f`
+
+`git stash pop`
 
 ......
