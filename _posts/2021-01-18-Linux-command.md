@@ -22,8 +22,38 @@ catalog: true
 
 > Reference: [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
 
-`find ./ -name "*.py"`
+```bash
+find ./ -name "*.py"
+```
 
-`find ./ -name "*.py" -type d`
+```bash
+find ./ -name "*.py" -type d
+```
 
-`grep -r "*.py" ./ -I`
+```bash
+locate
+```
+
+```bash
+grep -r "*.py" ./ -I
+```
+
+```bash
+scp -r lchen@172.xx.xxx.xxx:/home/lchen/work/backend cliang935@172.xx.xxx.xxx:/home/cliang935/work
+```
+
+```bash
+scp lchen@172.xx.xxx.xxx:/home/lchen/work/backend/innovus/script.tcl cliang935@172.xx.xxx.xxx:/home/cliang935/work
+```
+
+```bash
+du -hs ./*
+```
+
+```bash
+free -h -m 
+```
+
+```bash
+top
+```
