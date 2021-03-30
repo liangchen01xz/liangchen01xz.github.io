@@ -51,9 +51,14 @@ du -hs ./*
 ```
 
 ```bash
-free -h -m 
+free -hm 
 ```
 
 ```bash
 top
+htop
+```
+
+```bash
+ln -s /harddisk/disk2/lchen_test/ /home/lchen/
 ```
