@@ -47,7 +47,11 @@ scp lchen@172.xx.xxx.xxx:/home/lchen/work/backend/innovus/script.tcl cliang935@1
 ```
 
 ```bash
+df -hl
+df -h
+du -hs
 du -hs ./*
+du -h
 ```
 
 ```bash
@@ -60,5 +64,5 @@ htop
 ```
 
 ```bash
-ln -s /harddisk/disk2/lchen_test/ /home/lchen/
+ln -s /harddisk/disk2/work_lchen/ /home/lchen/
 ```
