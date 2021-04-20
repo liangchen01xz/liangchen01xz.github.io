@@ -52,6 +52,15 @@ du -h
 free -hm 
 ```
 
+Reference: https://www.shuzhiduo.com/A/LPdoe4VyJ3/
+```bash
+sync
+echo 3 > /proc/sys/vm/drop_caches or sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
+echo 0 > /proc/sys/vm/drop_caches
+sudo swapoff -a
+sudo swapon -a
+```
+
 ```bash
 top
 htop
@@ -59,4 +68,15 @@ htop
 
 ```bash
 ln -s /harddisk/disk2/work_lchen/ /home/lchen/
+```
+
+```bash
+tar -czvf test.tar.gz test
+tar -czvf /home/lchen/work/test.tar.gz test
+tar -czvf test.tar.gz --exclude=test/log --exclude=test/logv test
+
+tar -tzvf test.tar.gz
+
+tar -xzvf test.tar.gz
+tar -xzvf test.tar.gz -C /home/lchen/work
 ```
