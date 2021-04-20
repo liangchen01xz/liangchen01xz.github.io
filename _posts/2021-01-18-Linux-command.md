@@ -52,8 +52,9 @@ du -h
 free -hm 
 ```
 
-Reference: https://www.shuzhiduo.com/A/LPdoe4VyJ3/
 ```bash
+Reference: [https://www.shuzhiduo.com/A/LPdoe4VyJ3/](https://www.shuzhiduo.com/A/LPdoe4VyJ3/)
+
 sync
 echo 3 > /proc/sys/vm/drop_caches or sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
 echo 0 > /proc/sys/vm/drop_caches
