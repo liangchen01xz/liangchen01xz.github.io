@@ -121,31 +121,40 @@ catalog: true
 
 >  感觉不常用，我自己不常用
 
-- `:ls, :buffers`：列出所有缓冲区  
-- `:bn[ext]`：下一个缓冲区  
-- `:bp[revious]`：上一个缓冲区  
-- `:b {number, expression}`：跳转到指定缓冲区，例如`b2`  
-- `:b exa`：跳转到`example.txt`文件缓冲区  
-- `:sb 3`：分屏并打开编号为3的Buffer  
-- `:vertical sb 3`：同上，垂直分屏  
+`:ls, :buffers`：列出所有缓冲区  
+`<C-^>`:
+`:bn[ext]`：下一个缓冲区  
+`:bp[revious]`：上一个缓冲区  
+`:bf(irst)`:
+`:bl(ast)`:
+`:b {number, expression}`：跳转到指定缓冲区，例如`b2`  
+`:b exa`：跳转到`example.txt`文件缓冲区  
+`:bd(elete) N1 N2 ...`: delete buffer
+`:sb 3`：分屏并打开编号为3的Buffer  
+`:vertical sb 3`：同上，垂直分屏  
+
 
 ## 07 打开窗口  
 
 - `:new`：~  
 - `:vertical new`：垂直~  
 
+`:clo[se]`: close active window
+`:on[ly]`: just keep active window
+
 ## 08 标签操作  
 
 >  感觉不常用，我自己不常用
 
-- `:tabnew`：打开新的标签  
-- `:tabnew file`：在新标签中打开文件  
-- `:tabc`：关闭当前标签  
-- `:tabo`：关闭除当前的其他标签  
-- `:tabs`：列出所有标签  
-- `:tabn`：切换下一个标签  
-- `:tabp`：切换上一个标签  
-- 标准模式下按下`g`+`t`：在标签间切换  
+`:tabnew` `:tabedit`：打开新的标签  
+`:tabnew file` `:tabedit file`：在新标签中打开文件  
+`:tabc`：关闭当前标签  
+`:tabo`：关闭除当前的其他标签  
+`:tabs`：列出所有标签  
+`:tabn`：切换下一个标签  
+`:tabp`：切换上一个标签  
+`[N]gt`：在标签N间切换  
+`:tabmove [N]`: reorder tab; N=0 -> move to start positon; no N -> move to end position
 
 ## 09 跨文件复制粘贴内容  
 
@@ -173,7 +182,7 @@ catalog: true
  
 ## 录制操作
 
-- `qa`：开始录制，操作保存到a buffer, `q`：退出录制, `n@a`：重复n次操作
+- `qa`：开始录制，操作保存到a buffer, `q`：退出录制, `n@a`：重复n次操作.
 
 ## 不换行下一行多行显示
 
@@ -181,16 +190,37 @@ catalog: true
 
 ## 单词跳转
 
-- `w e b`
+- `w b e ge`
+
+## 字符串跳转
+
+- `W B E gE`
 
 ## 光标跳转
 
 - `H M L`
 
+## 在匹配括号间跳转
+- `%`
 ## 一行内查找字符
 
-- `f F`
-- `;,`: 重复查找
+- `f F` `t T` `; ,`
+- `f,dt.`
+- `v /ge h d`: `d/ge`
+
+## 位置标记，快速跳回:
+
+`mm`: mark; `\`m`: tiaohui `m[a-zA-Z]`
+
+```
+``: 当前文件中上次跳转动作之前的位置
+`.: 上次修改的地方（不仅限于当前文件）
+`^: 上次插入的地方
+`[: 上次修改或复制的开始位置
+`]: 上次修改或复制的结束位置
+`<: 上次高亮选区的开始位置
+`>: 上次高亮选区的结束位置
+```
 
 ## 修改单词
 
@@ -232,6 +262,9 @@ Normal mode:
 - `gU`: ABC
 - `g~`: abc -> ABC
 
+`<C-o>`: back to the previous position
+`<C-i>`:
+
 Insert mode:
 
 `<C-h>`: 删除前一个字符
@@ -250,3 +283,48 @@ Visual mode:
 `<C-v>`: 针对块
 `gv`: 重复选择上一次的可视选区
 `o`: 切换选区的开始位置
+
+---------------------------------------------------------------------------
+
+Ex order: 
+
+`@:`: repeat previous Ex order
+
+`:t`: copy (do not cover register)
+`:t.`: yyp
+`:nt.`: copy No.n row to current row
+`:t$`: 
+`:t0`: 
+`:'<,'>t$`:
+`:'<,'>t0`:
+
+`:m`: move (do not cover register)
+`:'<,'>m$`: dGp
+`:'<,'>m0`: dggp
+...
+
+`A;` `:'<,'>normal .`: 
+`:'<,'>normal A;`: 
+`:%normal i//`: `I//<esc>jI//<esc>jI//<esc>j...`
+`:normal @q`: 
+
+`:` `<Up>` `<Down>`
+`q:` `k` `j` `:q` `<C-f>` : open command line window 
+
+`:!ls`: shell order
+
+---------------------------------------------------------------------------
+
+`:edit file` `<C-o>` `<C-i>`
+`g;` `g,`
+
+`:Ve` `:He` `:Se`
+`C-^`
+
+## Register in Vim
+
+no name register: `x s c d y ` `""p`===`p`
+register for copy: `y` `"0p`
+have name register: `"ad` `"ay` `"a-"z` `"A-"Z`
+black hole register: `"_d`: do not save Copy
+system clipboard: `"+p` `"+y` `"*`
