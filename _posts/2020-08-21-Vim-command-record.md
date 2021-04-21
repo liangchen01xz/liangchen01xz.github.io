@@ -122,15 +122,25 @@ catalog: true
 >  感觉不常用，我自己不常用
 
 `:ls, :buffers`：列出所有缓冲区  
+
 `<C-^>`:
+
 `:bn[ext]`：下一个缓冲区  
+
 `:bp[revious]`：上一个缓冲区  
+
 `:bf(irst)`:
+
 `:bl(ast)`:
+
 `:b {number, expression}`：跳转到指定缓冲区，例如`b2`  
+
 `:b exa`：跳转到`example.txt`文件缓冲区  
+
 `:bd(elete) N1 N2 ...`: delete buffer
+
 `:sb 3`：分屏并打开编号为3的Buffer  
+
 `:vertical sb 3`：同上，垂直分屏  
 
 
@@ -140,6 +150,7 @@ catalog: true
 - `:vertical new`：垂直~  
 
 `:clo[se]`: close active window
+
 `:on[ly]`: just keep active window
 
 ## 08 标签操作  
@@ -147,13 +158,21 @@ catalog: true
 >  感觉不常用，我自己不常用
 
 `:tabnew` `:tabedit`：打开新的标签  
+
 `:tabnew file` `:tabedit file`：在新标签中打开文件  
+
 `:tabc`：关闭当前标签  
+
 `:tabo`：关闭除当前的其他标签  
+
 `:tabs`：列出所有标签  
+
 `:tabn`：切换下一个标签  
+
 `:tabp`：切换上一个标签  
+
 `[N]gt`：在标签N间切换  
+
 `:tabmove [N]`: reorder tab; N=0 -> move to start positon; no N -> move to end position
 
 ## 09 跨文件复制粘贴内容  
@@ -242,7 +261,7 @@ catalog: true
 
 ---------------------------------------------------------------------------
 
-Normal mode:
+## Normal mode:
 
 - `s` = `xi`
 
@@ -263,52 +282,72 @@ Normal mode:
 - `g~`: abc -> ABC
 
 `<C-o>`: back to the previous position
+
 `<C-i>`:
 
-Insert mode:
+## Insert mode:
 
 `<C-h>`: 删除前一个字符
+
 `<C-w>`: 删除前一个单词
+
 `<C-u>`: 删除至行首
 
 `<C-[>`: transfer to Nomal mode
+
 `<C-o>`: transfer to Insert-Normal mode 在插入模式下可以进行一次普通模式操作
 
 `<C-r>=6+10<Enter>`: 在插入模式下计算寄存器中的表达式结果并输出在光标后
 
-Visual mode:
+## Visual mode:
 
 `v`: 针对字符
+
 `V`: 针对行
+
 `<C-v>`: 针对块
+
 `gv`: 重复选择上一次的可视选区
+
 `o`: 切换选区的开始位置
 
 ---------------------------------------------------------------------------
 
-Ex order: 
+## Ex order: 
 
 `@:`: repeat previous Ex order
 
 `:t`: copy (do not cover register)
+
 `:t.`: yyp
+
 `:nt.`: copy No.n row to current row
+
 `:t$`: 
+
 `:t0`: 
+
 `:'<,'>t$`:
+
 `:'<,'>t0`:
 
 `:m`: move (do not cover register)
+
 `:'<,'>m$`: dGp
+
 `:'<,'>m0`: dggp
 ...
 
 `A;` `:'<,'>normal .`: 
+
 `:'<,'>normal A;`: 
+
 `:%normal i//`: `I//<esc>jI//<esc>jI//<esc>j...`
+
 `:normal @q`: 
 
 `:` `<Up>` `<Down>`
+
 `q:` `k` `j` `:q` `<C-f>` : open command line window 
 
 `:!ls`: shell order
@@ -316,15 +355,21 @@ Ex order:
 ---------------------------------------------------------------------------
 
 `:edit file` `<C-o>` `<C-i>`
+
 `g;` `g,`
 
 `:Ve` `:He` `:Se`
+
 `C-^`
 
 ## Register in Vim
 
 no name register: `x s c d y ` `""p`===`p`
+
 register for copy: `y` `"0p`
+
 have name register: `"ad` `"ay` `"a-"z` `"A-"Z`
+
 black hole register: `"_d`: do not save Copy
+
 system clipboard: `"+p` `"+y` `"*`
