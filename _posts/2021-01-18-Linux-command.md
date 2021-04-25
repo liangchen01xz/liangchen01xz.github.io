@@ -22,6 +22,22 @@ catalog: true
 
 > Reference: [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
 
+`<ctrl-r>` `<ctrl-w>` `<ctrl-u>` `<ctrl-k>` `<ctrl-a>` `<ctrl-e>` `<ctrl-l>` `<alt-b>` `<alt-f>` `<alt-.>`
+
+```bash
+chmod 777 file
+u:user g:group o:others a:all
+chmod a+rwx file
+chmod u+rwx file
+chmod g+rwx file
+chmod o+rwx file
+chmod u-w file
+chmod g-w file
+chmod o-w file
+chmod u=rw, go= file
+chmod -R u+rw, go-w folder
+```
+
 ```bash
 find ./ -name "*.py"
 find ./ -name "*.py" -type d
@@ -29,6 +45,10 @@ find ./ -name "*.py" -type d
 
 ```bash
 locate
+```
+
+```bash
+which
 ```
 
 ```bash
@@ -79,4 +99,10 @@ tar -tzvf test.tar.gz
 
 tar -xzvf test.tar.gz
 tar -xzvf test.tar.gz -C /home/lchen/work
+```
+
+```bash
+awk
+sed
+grep
 ```
