@@ -2,10 +2,10 @@
 title: Lic Blog
 SEOTitle: 梁晨的博客 | Lic Blog
 header-img: img/home-bg.jpg
-email: cliang935@gmail.com
+email: liangchen01xz@foxmail.com
 description: "Aim higher, achieve further."
 keyword: ""
-url: "https://cliang935.github.io"              # your host, for absolute URL
+url: "https://liangchen01xz.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -15,7 +15,7 @@ future: true
 RSS: false
 #weibo_username:
 #zhihu_username:
-github_username:    cliang935
+github_username:    liangchen01xz
 #twitter_username:
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
