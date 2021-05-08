@@ -91,12 +91,15 @@ ln -s /harddisk/disk2/work_lchen/ /home/lchen/
 ```
 
 ```bash
+// zip
 tar -czvf test.tar.gz test
 tar -czvf /home/lchen/work/test.tar.gz test
 tar -czvf test.tar.gz --exclude=test/log --exclude=test/logv test
 
+// list
 tar -tzvf test.tar.gz
 
+// unzip
 tar -xzvf test.tar.gz
 tar -xzvf test.tar.gz -C /home/lchen/work
 ```
