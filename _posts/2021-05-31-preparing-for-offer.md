@@ -9,6 +9,8 @@ catalog: true
 
 ## 1. CDC(clock domain crossing)
 
+> [**Clock Domain Crossing (CDC) Design & Verification Techniques Using SystemVerilog**](http://www.sunburst-design.com/papers/CummingsSNUG2008Boston_CDC.pdf)
+
 ### HANDSHAKE SYNCHRONIZER
 
 ![handshake]({{site.url}}/img/in-post/notes/handshake.png)
