@@ -66,57 +66,58 @@ catalog: true
     - Encoding: Gray = Binary xor (Binary >> 1)
 
     - Example:
-    ```verilog
-    B101
-    G = 101 ^ 010 = 111
-    ```
+
+        ```verilog
+        B101
+        G = 101 ^ 010 = 111
+        ```
 
     - Decoding: Binary[i] = xor(Gray >> i)
 
     - Example:
-    ```verilog
-    G111
-    B[0] = ^(111 >> 0) = ^(111) = 1
-    B[1] = ^(111 >> 1) = ^(011) = 0
-    B[2] = ^(111 >> 2) = ^(001) = 1
-    B = 101
-    ```
+
+        ```verilog
+        G111
+        B[0] = ^(111 >> 0) = ^(111) = 1
+        B[1] = ^(111 >> 1) = ^(011) = 0
+        B[2] = ^(111 >> 2) = ^(001) = 1
+        B = 101
+        ```
 
 3. Write_Full & Read_Empty Flag
 
     - Binary pointer
-    ```verilog
-    Empty: r_ptr = w_ptr
-    
-    Full: r_ptr = {~w_ptr[MSB], w_ptr[MSB-1:0]}
-    ```
+
+        ```verilog
+        Empty: r_ptr = w_ptr
+        Full: r_ptr = {~w_ptr[MSB], w_ptr[MSB-1:0]}
+        ```
 
     - Gray pointer
 
-    ```verilog
-    Empty: r_ptr = w_ptr
-    
-    Full: r_ptr = {~w_ptr[MSB], ~w_ptr[MSB-1], w_ptr[MSB-2:0]}
-    ```
+        ```verilog
+        Empty: r_ptr = w_ptr
+        Full: r_ptr = {~w_ptr[MSB], ~w_ptr[MSB-1], w_ptr[MSB-2:0]}
+        ```
 
-    | Decimal | Binary  | Gray    |
-    | :----:  | :----:  | :----:  |
-    | **4'd0**    | **4'b0000** | **4'b0000** |
-    | 4'b1    | 4'b0001 | 4'b0001 |
-    | 4'b2    | 4'b0010 | 4'b0011 |
-    | 4'b3    | 4'b0011 | 4'b0010 |
-    | 4'b4    | 4'b0100 | 4'b0110 |
-    | 4'b5    | 4'b0101 | 4'b0111 |
-    | 4'b6    | 4'b0110 | 4'b0101 |
-    | 4'b7    | 4'b0111 | 4'b0100 |
-    | **4'b8**    | **4'b1000** | **4'b1100** |
-    | 4'b9    | 4'b1001 | 4'b1101 |
-    | 4'b10   | 4'b1010 | 4'b1111 |
-    | 4'b11   | 4'b1011 | 4'b1110 |
-    | 4'b12   | 4'b1100 | 4'b1010 |
-    | 4'b13   | 4'b1101 | 4'b1011 |
-    | 4'b14   | 4'b1110 | 4'b1001 |
-    | 4'b15   | 4'b1111 | 4'b1000 |
+        | Decimal | Binary  | Gray    |
+        | :----:  | :----:  | :----:  |
+        | **4'd0**    | **4'b0000** | **4'b0000** |
+        | 4'b1    | 4'b0001 | 4'b0001 |
+        | 4'b2    | 4'b0010 | 4'b0011 |
+        | 4'b3    | 4'b0011 | 4'b0010 |
+        | 4'b4    | 4'b0100 | 4'b0110 |
+        | 4'b5    | 4'b0101 | 4'b0111 |
+        | 4'b6    | 4'b0110 | 4'b0101 |
+        | 4'b7    | 4'b0111 | 4'b0100 |
+        | **4'b8**    | **4'b1000** | **4'b1100** |
+        | 4'b9    | 4'b1001 | 4'b1101 |
+        | 4'b10   | 4'b1010 | 4'b1111 |
+        | 4'b11   | 4'b1011 | 4'b1110 |
+        | 4'b12   | 4'b1100 | 4'b1010 |
+        | 4'b13   | 4'b1101 | 4'b1011 |
+        | 4'b14   | 4'b1110 | 4'b1001 |
+        | 4'b15   | 4'b1111 | 4'b1000 |
 
 4. FIFO DEPTH CONSIDERATION
 
@@ -125,25 +126,26 @@ catalog: true
     - async fifo: **only power of 2 ??**
 
     - Example:
-    ```
-    Depth: 2exp3 = 8
-    Binary: 000  001 010 011 100 101 110  111
-    Gray:  *000* 001 011 010 110 111 101 *100* ---> 000 (only one bit changed)
-    
-    Supposed FIFO depth is 6
-    Binary: 000  001 010 011 100 101
-    Gray:  *000* 001 011 010 110 111 ---> 000 (multi-bits changed) cause problems
-    
-    Gray code addr start: 2exp(n-1) - FIFO_DEPTH/2
-    Gray code addr end:   2exp(n-1) + FIFO_DEPTH/2 - 1
-    
-    Supposed FIFO depth is 6
-    Gray code addr start: 2exp(n-1) - FIFO_DEPTH/2     = 2exp(3-1) - 6/2    = 1
-    Gray code addr end:   2exp(n-1) + FIFO_DEPTH/2 - 1 = 2exp(3-1) + 6/2 -1 = 6
-    ==>
-    Binary: 001  010 011 100 101 110
-    Gray:  *001* 011 010 110 111 101 ---> 001 (only one bit changed)
-    ```
+
+        ```
+        Depth: 2exp3 = 8
+        Binary: 000  001 010 011 100 101 110  111
+        Gray:  *000* 001 011 010 110 111 101 *100* ---> 000 (only one bit changed)
+        /////////////////////////////////////////////////////////////////////////////// 
+        Supposed FIFO depth is 6
+        Binary: 000  001 010 011 100 101
+        Gray:  *000* 001 011 010 110 111 ---> 000 (multi-bits changed) cause problems
+        ///////////////////////////////////////////////////////////////////////////////
+        Gray code addr start: 2exp(n-1) - FIFO_DEPTH/2
+        Gray code addr end:   2exp(n-1) + FIFO_DEPTH/2 - 1
+        ////////////////////////////////////////////////////////////////////////////// 
+        Supposed FIFO depth is 6
+        Gray code addr start: 2exp(n-1) - FIFO_DEPTH/2     = 2exp(3-1) - 6/2    = 1
+        Gray code addr end:   2exp(n-1) + FIFO_DEPTH/2 - 1 = 2exp(3-1) + 6/2 -1 = 6
+        ==>
+        Binary: 001  010 011 100 101 110
+        Gray:  *001* 011 010 110 111 101 ---> 001 (only one bit changed)
+        ```
 
 ## 2. STA(static timing analysis)
 
