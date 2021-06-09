@@ -316,6 +316,8 @@ endmodule
 
 #### 4.3.2 APB2P0
 
+> [https://developer.arm.com/documentation/ihi0024/latest/](https://developer.arm.com/documentation/ihi0024/latest/)
+
 ![apb-about]({{site.url}}/img/in-post/notes/apb-about.png)
 
 ![apb-signals-table0]({{site.url}}/img/in-post/notes/apb-signals-table0.png)
