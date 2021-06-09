@@ -20,7 +20,7 @@ catalog: true
     </script>
 </head>
 
-> Project Address: [https://github.com/cliang935/vcs_script](https://github.com/cliang935/vcs_script)
+> Project Address: [https://github.com/liangchen01xz/vcs_script](https://github.com/liangchen01xz/vcs_script)
 
 0. 在`.bashrc`中加入:
 
@@ -81,6 +81,7 @@ catalog: true
     run:
     	./${DESIGN_NAME}_simv \
       -ucli -i ./dump_fsdb_vcs.tcl \
+      +fsdb+all=on \
       +fsdb+autoflush \
       -l run.log 
     
@@ -198,6 +199,7 @@ catalog: true
     	#Step3
     	./${DESIGN_NAME}_simv \
     	-ucli -i ./dump_fsdb_vcs.tcl \
+      +fsdb+all=on \
     	+fsdb+autoflush \
     	-l run.log
     

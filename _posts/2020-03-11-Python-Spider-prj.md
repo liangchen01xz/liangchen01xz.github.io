@@ -22,7 +22,7 @@ catalog: true
 
 # 如何用Python来爬取网络图片？
 
-> 本篇文章对应的项目地址：[https://github.com/cliang935/pics_crawler_prj](https://github.com/cliang935/pics_crawler_prj)
+> 本篇文章对应的项目地址：[https://github.com/liangchen01xz/pics_crawler_prj](https://github.com/liangchen01xz/pics_crawler_prj)
 
 -------------------------------------------------------------
 

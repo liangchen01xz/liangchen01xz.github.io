@@ -22,7 +22,7 @@ catalog: true
 
 # 用FPGA驱动TFT屏显示图片
 
-> 本篇文章对应的项目地址：[https://github.com/cliang935/TFT_img_prj](https://github.com/cliang935/TFT_img_prj)
+> 本篇文章对应的项目地址：[https://github.com/liangchen01xz/TFT_img_prj](https://github.com/liangchen01xz/TFT_img_prj)
 
 ## 01. RGB接口TFT屏扫描原理
 
@@ -229,4 +229,4 @@ assign data_in = img_act?img_data:16'd0;
 
 > 编译，综合，分配引脚，生成 sof 文件，下载至开发板上看到以下现象：
 >
-> *Please check it on [Github](https://github.com/cliang935/TFT_img_prj/blob/master/dog.gif)* 
+> *Please check it on [Github](https://github.com/liangchen01xz/TFT_img_prj/blob/master/dog.gif)* 

@@ -56,8 +56,8 @@ grep -r "*.py" ./ -I
 ```
 
 ```bash
-scp -r lchen@172.xx.xxx.xxx:/home/lchen/work/backend cliang935@172.xx.xxx.xxx:/home/cliang935/work
-scp lchen@172.xx.xxx.xxx:/home/lchen/work/backend/innovus/script.tcl cliang935@172.xx.xxx.xxx:/home/cliang935/work
+scp -r lchen@172.xx.xxx.xxx:/home/lchen/work/backend liangchen01xz@172.xx.xxx.xxx:/home/liangchen01xz/work
+scp lchen@172.xx.xxx.xxx:/home/lchen/work/backend/innovus/script.tcl liangchen01xz@172.xx.xxx.xxx:/home/liangchen01xz/work
 ```
 
 ```bash

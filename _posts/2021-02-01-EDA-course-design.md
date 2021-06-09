@@ -22,7 +22,7 @@ catalog: true
 
 Reference: [https://zhuanlan.zhihu.com/p/127164011](https://zhuanlan.zhihu.com/p/127164011)
 
-Project Address: [https://github.com/cliang935/EDA_course_design](https://github.com/cliang935/EDA_course_design)
+Project Address: [https://github.com/liangchen01xz/EDA_course_design](https://github.com/liangchen01xz/EDA_course_design)
 
 > 作者按：
 > 1. 这是研一时一门课的课程设计，实现的功能是有符号无符号兼容的64x64位乘法器，并且对其进行了前仿真、代码覆盖率查看、DC综合、FM一致性检查、VCS后仿真等一系列操作，目的是熟悉相关EDA工具的使用，后期希望可以补充上PT的STA和布局布线的内容。

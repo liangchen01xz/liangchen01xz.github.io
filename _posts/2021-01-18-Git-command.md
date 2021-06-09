@@ -20,7 +20,7 @@ catalog: true
     </script>
 </head>
 
-> [GIT CHEAT SHEET](https://github.com/cliang935/Notes/blob/master/git-cheatsheet.pdf)
+> [GIT CHEAT SHEET](https://github.com/liangchen01xz/Notes/blob/master/git-cheatsheet.pdf)
 
 `git clone ...`
 

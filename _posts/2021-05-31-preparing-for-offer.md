@@ -10,14 +10,16 @@ catalog: true
 ## 1. CDC(clock domain crossing)
 
 > [**Clock Domain Crossing (CDC) Design & Verification Techniques Using SystemVerilog**](http://www.sunburst-design.com/papers/CummingsSNUG2008Boston_CDC.pdf)
+>
+> [https://www.zhihu.com/people/li-hong-jiang-54/posts](https://www.zhihu.com/people/li-hong-jiang-54/posts)
 
-### HANDSHAKE SYNCHRONIZER
+### 1.0 HANDSHAKE SYNCHRONIZER
 
 ![handshake]({{site.url}}/img/in-post/notes/handshake.png)
 
 ![handshake-timing-graph]({{site.url}}/img/in-post/notes/handshake-timing-graph.png)
 
-### 1. Single Bit
+### 1.1 Single Bit
 
 1. MTBF(mean time before failure)
 
@@ -47,11 +49,11 @@ catalog: true
 
     - Async FIFO
 
-### 2. Multi-Bit
+### 1.2 Multi-Bit
 
-#### 1. MCP(multi cycle path)
+#### 1.2.1 MCP(multi cycle path)
 
-#### 2. Async FIFO(first in first out)
+#### 1.2.2 Async FIFO(first in first out)
 
 > [https://www.youtube.com/watch?v=0LVHPRmi88c](https://www.youtube.com/watch?v=0LVHPRmi88c)
 
@@ -173,15 +175,15 @@ catalog: true
 
 ## 3. FSM(finite-state machine)
 
-### 1. Moore fsm
+### 3.1 Moore fsm
 
 output values are determined only by its **current state**.
 
-### 2. Mealy fsm
+### 3.2 Mealy fsm
 
 output values are determined both by its **current state and the current inputs**.
 
-### 3. 2-level 
+### 3.3 2-level 
 
 ```verilog
 module fsm(...);
@@ -232,7 +234,7 @@ end
 endmodule
 ```
 
-### 4. 3-level
+### 3.4 3-level
 
 ```verilog
 module fsm(...);
@@ -287,25 +289,78 @@ endmodule
 
 ## 4. Project Experience
 
-### 1. vcs sim script
+### 4.1 vcs sim script
 
-### 2. lstm
+[https://liangchen01xz.github.io/2021/01/18/vcs-sim-scr/](https://liangchen01xz.github.io/2021/01/18/vcs-sim-scr/)
 
-### 3. spi2apb
+### 4.2 lstm
 
-### 4. DC(Design Compiler)
+[https://liangchen01xz.github.io/2020/11/25/Paper-Notes/](https://liangchen01xz.github.io/2020/11/25/Paper-Notes/)
 
-### 5. backend(Innovus)
+[https://liangchen01xz.github.io/2020/12/01/Fixed-Point-Floating-Point-Notes/](https://liangchen01xz.github.io/2020/12/01/Fixed-Point-Floating-Point-Notes/)
+
+### 4.3 **spi2apb**
+
+#### 4.3.1 Summary
+
+1. 8bits paddr and pwdata & prdata in spi_slave module(download online);
+   32bits paddr and pwdata & prdata in SoC module(self).
+
+2. Three apb slaves included ddr3 controller, ddr3 phy and SoC modules;
+   but only one prdata net in design top, causing net prdata has multi-drivers.
+   Testbench using verilog(wire prdata) only reports Warning but no Error,
+   causes simulation continue until `$finish()`.
+   Testbench using systemverilog(logic prdata) reports Error, and simulation interrupts.
+   Firstly, add Multiplexer depending dirrerent address used by three slaves for prdata: bad result;
+   Secondly, for prdata and all other p_signals including psel, penable, pwrite, pwdata, paddr: good result.
+
+#### 4.3.2 APB2P0
+
+![apb-about]({{site.url}}/img/in-post/notes/apb-about.png)
+
+![apb-signals-table0]({{site.url}}/img/in-post/notes/apb-signals-table0.png)
+
+![apb-signals-table1]({{site.url}}/img/in-post/notes/apb-signals-table1.png)
+
+![apb-address-bus]({{site.url}}/img/in-post/notes/apb-address-bus.png)
+
+![apb-data-buses]({{site.url}}/img/in-post/notes/apb-about.png)
+
+![apb2p0-table]({{site.url}}/img/in-post/notes/apb2p0-table.png)
+
+![apb-fsm]({{site.url}}/img/in-post/notes/apb-fsm.png)
+
+![apb-write]({{site.url}}/img/in-post/notes/apb-write.png)
+
+![apb-write-wait]({{site.url}}/img/in-post/notes/apb-write-wait.png)
+
+![apb-read]({{site.url}}/img/in-post/notes/apb-read.png)
+
+#### 4.3.3 SPI(Serial Peripheral Interface)
+
+> [https://www.corelis.com/education/tutorials/spi-tutorial/](https://www.corelis.com/education/tutorials/spi-tutorial/)
+
+![spi-4wire]({{site.url}}/img/in-post/notes/spi-4wire.png)
+
+![spi-mode]({{site.url}}/img/in-post/notes/spi-mode.png)
+
+![spi-write]({{site.url}}/img/in-post/notes/spi-write.png)
+
+![spi-read]({{site.url}}/img/in-post/notes/spi-read.png)
+
+### 4.4 DC(Design Compiler)
+
+### 4.5 backend(Innovus)
 
 ## 5. Others
 
-### 1. Sequence detector
+### 5.1 Sequence detector
 
-### 2. Vending machine
+### 5.2 Vending machine
 
-### 3. Matrix keyboard & Key debounce
+### 5.3 Matrix keyboard & Key debounce
 
-### 4. Asynchronous reset & Synchronous reset & Reset synchronizer
+### 5.4 Asynchronous reset & Synchronous reset & Reset synchronizer
 
 1. Recovery time
 

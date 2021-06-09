@@ -20,7 +20,7 @@ catalog: true
     </script>
 </head>
 
-Project Address: [https://github.com/cliang935/verilog_course_design](https://github.com/cliang935/verilog_course_design)
+Project Address: [https://github.com/liangchen01xz/verilog_course_design](https://github.com/liangchen01xz/verilog_course_design)
 
 > 作者按：
 > 1. 这是研一时一门课的课程设计，实现的功能是64x64位无符号整数乘法器，并且对其进行了前仿真、FPGA综合后仿真等操作。方案1和方案2是利用了16x16乘法器的小IP，时分复用，方案3同上一篇博客的设计。**这个只是我的一个课设，写在这里做个备份，博君一笑。**
