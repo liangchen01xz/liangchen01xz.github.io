@@ -2,7 +2,7 @@
 layout: post
 title: IC Examination
 author: Liang Chen
-date: 2021-06-01 18:00:00 +0800
+date: 2021-06-10 18:00:00 +0800
 tags: [IC, offer]
 catalog: true
 ---
