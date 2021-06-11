@@ -26,12 +26,20 @@ catalog: true
 
 ```shell
 su - root
+
 su - lchen
+sudo su
 ```
 
 
 
 ```bash
+chown lchen file
+chown -R lchen folder
+
+chgrp lchen file
+chgrp -R lchen folder
+
 chmod 777 file
 u:user g:group o:others a:all
 chmod a+rwx file
