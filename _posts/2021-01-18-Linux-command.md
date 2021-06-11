@@ -24,6 +24,13 @@ catalog: true
 
 `<ctrl-r>` `<ctrl-w>` `<ctrl-u>` `<ctrl-k>` `<ctrl-a>` `<ctrl-e>` `<ctrl-l>` `<alt-b>` `<alt-f>` `<alt-.>`
 
+```shell
+su - root
+su - lchen
+```
+
+
+
 ```bash
 chmod 777 file
 u:user g:group o:others a:all
