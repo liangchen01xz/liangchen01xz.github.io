@@ -1,4 +1,4 @@
-Hi, I am Liang Chen,  a ICer. Please contact me via:
+Hi, I am Chen Liang, a ICer. Please contact me via:
 
 QQ: 2200690877
 
