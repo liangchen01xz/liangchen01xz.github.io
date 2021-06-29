@@ -99,6 +99,11 @@ sudo swapon -a
 ```bash
 top
 htop
+
+top -u lchen
+pgrep -u lchen -l
+pgrep -u lchen vivado
+pgrep -u lchen | sduo xargs kill -9
 ```
 
 ```bash
