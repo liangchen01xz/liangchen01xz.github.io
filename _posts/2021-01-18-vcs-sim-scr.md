@@ -89,6 +89,7 @@ catalog: true
     
     dbg:
     	verdi \
+    	-ssf ${DESIGN_NAME}.fsdb \
     	-sv \
     	-f ${FILE_LIST} \
     	${INCDIR1} \
@@ -96,7 +97,6 @@ catalog: true
     	${INCDIR3} \
     	${DEFINE} \
     	-top ${TB_NAME} \
-    	-ssf ${DESIGN_NAME}.fsdb \
     	-nologo&
     
     clean:
@@ -205,15 +205,14 @@ catalog: true
     
     dbg:
     	verdi \
+    	-ssf ${DESIGN_NAME}.fsdb \
     	-sv \
     	-f ${FILE_LIST} \
-    	-work ${WORK} \
     	${INCDIR1} \
     	${INCDIR2} \
     	${INCDIR3} \
     	${DEFINE} \
     	-top ${TB_NAME} \
-    	-ssf ${DESIGN_NAME}.fsdb \
     	-nologo&
     
     
