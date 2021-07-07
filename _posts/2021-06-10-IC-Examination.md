@@ -12,7 +12,7 @@ catalog: true
     while(true) {
       var password = "";
       password = prompt('Please input password:', '');
-      if (password != '123456') {
+      if (password != 'easonchan') {
         alert ("password wrong!!");
       } else {
         break;
