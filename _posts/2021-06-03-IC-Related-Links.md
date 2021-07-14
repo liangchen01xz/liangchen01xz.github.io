@@ -7,9 +7,11 @@ tags: [IC, Links]
 catalog: true
 ---
 
-A Wonderful Blog Site:
+Wonderful Blog Sites:
 
 [TeamVLSI](https://www.teamvlsi.com/)
+
+[vlsiuniverse](https://vlsiuniverse.blogspot.com/)
 
 Verilog Practice Site:
 
