@@ -12,31 +12,48 @@ catalog: true
 ```verilog
 // HAVE BUG, WAITING FOR DEBUG !!!
 module async # (
-  parameter DATA_SIZE    = 8,
-            ADDRESS_SIZE = 4 
+  parameter FIFO_WIDTH  = 8,  
+            FIFO_DEPTH  = 16,
+            ADDR_WIDTH  = 4 
 )
 (
-  input                  wclk, wrst_n, wq,
-  input                  rclk, rrst_n, rq,
-  input  [DATA_SIZE-1:0] wdata,
-  output [DATA_SIZE-1:0] rdata,
-  output reg             wfull, rempty
-
+  input                   wclk, wrst_n, wq,
+  input                   rclk, rrst_n, rq,
+  input  [FIFO_WIDTH-1:0] wdata,
+  output [FIFO_WIDTH-1:0] rdata,
+  output                  wfull, rempty
 );
 
-reg [DATA_SIZE-1:0]    mem [0:(1<<ADDRESS_SIZE)-1];
-reg [ADDRESS_SIZE-1:0] waddr_bin, raddr_bin;
-wire[ADDRESS_SIZE-1:0] waddr_gray, raddr_gray;
-reg [ADDRESS_SIZE-1:0] wptr, rptr;
-reg [ADDRESS_SIZE-1:0] w1_rptr, w2_rptr;
-reg [ADDRESS_SIZE-1:0] r1_wptr, r2_wptr;
+reg  [FIFO_WIDTH-1:0] mem [FIFO_DEPTH-1:0];
+wire [ADDR_WIDTH-1:0] waddr, raddr;
+reg  [ADDR_WIDTH:0] waddr_bin, raddr_bin;
+wire [ADDR_WIDTH:0] waddr_gray, raddr_gray;
+reg  [ADDR_WIDTH:0] wptr, rptr;
+reg  [ADDR_WIDTH:0] w1_rptr, w2_rptr;
+reg  [ADDR_WIDTH:0] r1_wptr, r2_wptr;
 
-assign rdata = mem[raddr_bin];
+assign waddr = waddr_bin[ADDR_WIDTH-1:0];
+assign raddr = raddr_bin[ADDR_WIDTH-1:0];
+
+always @ (posedge rclk or negedge rrst_n)
+begin
+  if (!rrst_n)
+    rdata <= 0;
+  else
+  begin
+    if (rq && !rempty)
+      rdata <= mem[raddr];
+    else
+      rdata = rdata;
+  end
+end
 
 always @ (posedge wclk)
 begin
   if (wq && !wfull)
-    mem[waddr_bin] <= wdata;
+    mem[waddr] <= wdata;
+  else
+    mem[waddr] <= mem[waddr];
 end
 
 always @ (posedge wclk or negedge wrst_n)
@@ -67,6 +84,7 @@ begin
   end
 end
 
+assign raddr_gray = raddr_bin ^ (raddr_bin >> 1);
 always @ (posedge rclk or negedge rrst_n)
 begin
   if (!rrst_n)
@@ -84,16 +102,8 @@ begin
   end
 end
 
-assign raddr_gray = raddr_bin ^ (raddr_bin >> 1);
 
-always @ (posedge rclk or negedge rrst_n)
-begin
-  if (!rrst_n)
-    rempty <= 1'b1;
-  else
-    rempty <= (rptr==r2_wptr);
-end
-
+assign waddr_gray = waddr_bin ^ (waddr_bin>>1);
 always @ (posedge wclk or negedge wrst_n)
 begin
   if (!wrst_n)
@@ -111,15 +121,8 @@ begin
   end
 end
 
-assign waddr_gray = waddr_bin ^ (waddr_bin>>1);
-
-always @ (posedge wclk or negedge wrst_n)
-begin
-  if (!wrst_n)
-    wfull <= 1'b0;
-  else
-    wfull <= (w2_rptr == {~wptr[ADDRESS_SIZE-1], ~wptr[ADDRESS_SIZE-2], wptr[ADDRESS_SIZE-3:0]});
-end
+assign rempty = (rptr==r2_wptr);
+assign wfull = (w2_rptr == {~wptr[ADDR_WIDTH], ~wptr[ADDR_WIDTH-1], wptr[ADDR_WIDTH-2:0]});
 
 endmodule
 ```
