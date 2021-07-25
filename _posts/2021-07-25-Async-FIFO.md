@@ -17,11 +17,11 @@ module async # (
             ADDR_WIDTH  = 4 
 )
 (
-  input                   wclk, wrst_n, wq,
-  input                   rclk, rrst_n, rq,
-  input  [FIFO_WIDTH-1:0] wdata,
-  output [FIFO_WIDTH-1:0] rdata,
-  output                  wfull, rempty
+  input                       wclk, wrst_n, wq,
+  input                       rclk, rrst_n, rq,
+  input      [FIFO_WIDTH-1:0] wdata,
+  output reg [FIFO_WIDTH-1:0] rdata,
+  output                      wfull, rempty
 );
 
 reg  [FIFO_WIDTH-1:0] mem [FIFO_DEPTH-1:0];
