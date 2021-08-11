@@ -24,14 +24,35 @@ catalog: true
 
 `<ctrl-r>` `<ctrl-w>` `<ctrl-u>` `<ctrl-k>` `<ctrl-a>` `<ctrl-e>` `<ctrl-l>` `<alt-b>` `<alt-f>` `<alt-.>`
 
-```shell
+```bash
 su - root
 
 su - lchen
 sudo su
 ```
 
+```bash
+useradd -m username
+passwd username
+```
 
+```bash
+vncserver -geometry 1920x1080 :5
+vncserver -depth 8 :5
+
+vncserver :5
+
+ps -ef | grep Xvnc
+ps -aux | grep Xvnc
+
+vncserver -kill :5
+```
+
+```bash
+who
+who -H
+who -q
+```
 
 ```bash
 chown lchen file
