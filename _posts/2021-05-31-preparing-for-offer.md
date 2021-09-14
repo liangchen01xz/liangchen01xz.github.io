@@ -426,7 +426,7 @@ endmodule
       end
     assign sync_rst_n <= sync_rst_n_2;
 
-    always @(posedge clk)
+    always @(posedge clk or negedge sync_rst_n)
       if (!sync_rst_n)
         data_out <= 0;
       else
