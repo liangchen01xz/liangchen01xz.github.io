@@ -8,18 +8,6 @@ tags: [Notes, Linux]
 catalog: true
 ---
 
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-
 > Reference: [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
 
 `<ctrl-r>` `<ctrl-w>` `<ctrl-u>` `<ctrl-k>` `<ctrl-a>` `<ctrl-e>` `<ctrl-l>` `<alt-b>` `<alt-f>` `<alt-.>`
@@ -63,6 +51,7 @@ chgrp -R lchen folder
 
 chmod 777 file
 u:user g:group o:others a:all
+r:4    w:2     x:1
 chmod a+rwx file
 chmod u+rwx file
 chmod g+rwx file
@@ -75,19 +64,13 @@ chmod -R u+rw, go-w folder
 ```
 
 ```bash
+locate
+
+which
+
 find ./ -name "*.py"
 find ./ -name "*.py" -type d
-```
 
-```bash
-locate
-```
-
-```bash
-which
-```
-
-```bash
 grep -r "*.py" ./ -I
 ```
 
@@ -117,14 +100,34 @@ sudo swapoff -a
 sudo swapon -a
 ```
 
+Reference: [https://cloud.tencent.com/developer/article/1626785](https://cloud.tencent.com/developer/article/1626785)
+```bash
+sudo dd if=/dev/zero of=/swapfile bs=1024 count=33554432 # bs*count=32G
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+swapon --show
+free -hm
+sudo sed -i '$a /swapfile swap swap defaults 0 0' /etc/fstab
+
+cat /proc/sys/vm/swappiness
+sudo sysctl vm.swappiness=60 # server machine value
+sudo vi /etc/sysctl.conf
+append 'vm.swappiness=60'
+
+sudo swapoff -v /swapfile
+sudo sed -i '\/swapfile\ swap\ swap\ defaults\ 0\ 0/d' /etc/fstab
+sudo rm /swapfile
+```
+
 ```bash
 top
 htop
 
-top -u lchen
+htop -u lchen
 pgrep -u lchen -l
 pgrep -u lchen vivado
-pgrep -u lchen | sduo xargs kill -9
+pgrep -u lchen | sudo xargs kill -9
 ```
 
 ```bash
@@ -146,7 +149,58 @@ tar -xzvf test.tar.gz -C /home/lchen/work
 ```
 
 ```bash
-awk
-sed
-grep
+cat -n test.v
+
+sed -i '$a newline' test.v
+sed -i '$i newline' test.v
+sed -i '1a newline' test.v
+sed -i '1i newline' test.v
+sed -i 'na newline' test.v # n: line number
+sed -i 'ni newline' test.v 
+
+sed -i '$d' test.v
+sed -i 'nd' test.v
+sed -i '1,4d' test.v
+
+sed -i '1,$s/old/new/g' test.v
+
+sed -i '2,4c 2number\n3number\n4number' test.v
+
+sed -i '/match/d' test.v
+sed -i '/match/p' test.v
+sed -i '/\<match\>/d' test.v
+sed -i '/\<match\>/p' test.v
+sed -i '/match/{s/old/new/g}' test.v
+sed -i '/\<match\>/{s/old/new/g}' test.v
+
+sed -i '/match/{s/old/new/g;p}' test.v
+sed -i '/match/{s/old/new/g;p;q}' test.v
+
+sed -e '$a newline' test.v > new.v
+sed -e '$i newline' test.v
+sed -e '1a newline' test.v
+sed -e '1i newline' test.v
+sed -e 'na newline' test.v # n: line number
+sed -e 'ni newline' test.v
+
+sed -e '$d' test.v
+sed -e 'nd' test.v
+sed -e '1,4d' test.v
+
+sed -e '1,$s/old/new/g' test.v
+
+sed -e '2,4c 2number\n3number\n4number' test.v
+
+cat -n test.v | sed -n '/\<match\>/p'
+cat -n test.v | sed -n '/match/p'
+
+sed -e '/match/d' test.v
+sed -e '/match/p' test.v
+sed -e '/\<match\>/d' test.v
+sed -e '/\<match\>/p' test.v
+sed -e '/match/{s/old/new/g}' test.v
+sed -e '/\<match\>/{s/old/new/g}' test.v
+
+sed -e '/match/{s/old/new/g;p}' test.v
+sed -e '/match/{s/old/new/g;p;q}' test.v
 ```
