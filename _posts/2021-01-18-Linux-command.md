@@ -29,11 +29,12 @@ vncserver -geometry 1920x1080 :5
 vncserver -depth 8 :5
 
 vncserver :5
+vncserver -kill :5
 
 ps -ef | grep Xvnc
 ps -aux | grep Xvnc
 
-vncserver -kill :5
+sudo iptables -I INPUT -p tcp --dport 5922 -j ACCEPT
 ```
 
 ```bash
