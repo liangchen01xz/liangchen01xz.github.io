@@ -373,3 +373,17 @@ have name register: `"ad` `"ay` `"a-"z` `"A-"Z`
 black hole register: `"_d`: do not save Copy
 
 system clipboard: `"+p` `"+y` `"*`
+
+## go file
+
+gf: go file
+
+:bf back file
+
+`<C-o>`
+
+`<C-6>`
+
+## syntax
+
+:syn on/off
