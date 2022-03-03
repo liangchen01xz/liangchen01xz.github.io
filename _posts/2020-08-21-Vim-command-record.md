@@ -281,10 +281,6 @@ catalog: true
 - `gU`: ABC
 - `g~`: abc -> ABC
 
-`<C-o>`: back to the previous position
-
-`<C-i>`:
-
 ## Insert mode:
 
 `<C-h>`: 删除前一个字符
